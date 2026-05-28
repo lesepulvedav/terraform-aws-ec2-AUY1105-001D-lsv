@@ -21,3 +21,14 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "subnet_id" {
+  description = "ID de la subnet donde desplegar la instancia EC2"
+  type        = string
+}
+
+variable "security_group_ids" {
+  description = "Lista de IDs de security groups para la instancia EC2"
+  type        = list(string)
+  default     = []
+}
